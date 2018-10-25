@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
+html.sr .scroll-frame-1, .scroll-frame-2, .scroll-frame-3, .scroll-frame-nav, .scroll-frame-logo-1, .scroll-frame-logo-2 {
+    visibility: hidden;
+}
+
 div a img {
     display: none;
 }
@@ -43,8 +47,62 @@ html, body {
 }
 
 header {
+    -o-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .4s;
     background: #242634;
     padding: 30px;
+    position: fixed;
+    z-index: 4;
+}
+
+.fixed-mode {
+    -o-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .4s;
+    position: fixed !important;
+    background-color: white;
+    color: black !important;
+    border-bottom: 3px solid #47D2E9;
+    border-radius: 2px;
+    opacity: 0.85 ;
+}
+
+.fixed-mode li {
+    background: none !important;
+}
+
+.fixed-mode li a {
+    -o-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .4s;
+    color: #52667F !important;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.fixed-mode li a:hover {
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .2s;
+    padding-bottom: 2px; 
+    border-bottom: 3px solid #47D2E9;
 }
 
 .main-frame {
@@ -222,6 +280,25 @@ header {
     }
     .title-02 {
         margin-bottom: 40px;
+    }
+    .fixed-mode {
+        position: inherit !important;
+        opacity: inherit;
+        background-color: #242634;
+    }
+    .fixed-mode li:hover {
+        background: #52667F !important;
+    }
+    
+    .fixed-mode li a {
+        color: #B3B5CD !important;
+        font-weight: inherit;
+        margin-left: inherit;
+    }
+    
+    .fixed-mode li a:hover {
+        padding-bottom: inherit; 
+        border-bottom: inherit
     }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" class="sr">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,6 +16,7 @@
             crossorigin="anonymous">
     </script> 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="<?= base_url(); ?>assets/js/functions.js"></script>
     <link rel="stylesheet" 
           href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
@@ -32,8 +33,8 @@
 
     <title>Portefólio - Bruno Gabriel Nunes Martins</title>
 </head>
-<header>
-    <nav >
+<header class="scroll-frame-nav">
+    <nav>
         <div class="toggle">
             <i class="fas fa-bars" aria-hidden="true"></i>
         </div>
