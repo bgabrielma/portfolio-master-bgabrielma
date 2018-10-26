@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/content.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <title>Portefólio - Bruno Gabriel Nunes Martins</title>
+    <title><?= $page_title; ?></title>
 </head>
 <header class="scroll-frame-nav">
     <nav>
@@ -41,9 +41,11 @@
         <ul class="nav-website">
             <li><a href="./home">Página Principal</a></li>
             <li><a href="#">Serviços</a></li>
-            <li><a href="#">Os meus trabalhos</a></li>
+            <li><a href="./works">Os meus trabalhos</a></li>
             <li><a href="./contact">Contacto</a></li>
         </ul>
     </nav>
 </header>
 <body>
+    <div class="container-fluid" style="padding: 0;">
+        

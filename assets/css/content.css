@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-html.sr .scroll-frame-1, .scroll-frame-2, .scroll-frame-3, .scroll-frame-nav, .scroll-frame-logo-1, .scroll-frame-logo-2 {
+html.sr .scroll-frame-1, 
+        .scroll-frame-2, 
+        .scroll-frame-3, 
+        .scroll-frame-nav, 
+        .scroll-frame-logo-1, 
+        .scroll-frame-logo-2,
+        .scroll-frame-work-card,
+        .scroll-frame-work-cards {
     visibility: hidden;
 }
 
@@ -38,7 +45,7 @@ img {
 ::-webkit-scrollbar-thumb:hover { background: #242634; }
 
 html, body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -255,8 +262,8 @@ header {
 @media (max-width: 768px) {
     html {
         overflow-x: hidden;
+        margin: 0 auto;
     }
-
     .toggle {
         display: block;
     }
@@ -289,16 +296,23 @@ header {
     .fixed-mode li:hover {
         background: #52667F !important;
     }
-    
     .fixed-mode li a {
         color: #B3B5CD !important;
         font-weight: inherit;
         margin-left: inherit;
     }
-    
     .fixed-mode li a:hover {
         padding-bottom: inherit; 
         border-bottom: inherit
+    }
+    .correct-viewport {
+        margin: 0px !important;
+    }
+    .text-card .text {
+        font-size: 1.4rem !important;  
+    }
+    .text-card {
+        height: 65vh !important;
     }
 }
 
@@ -323,6 +337,29 @@ header {
     overflow: auto;
     color: #fff;
     text-shadow: 1px 1px 6px rgba(150, 150, 150, 1);
+}
+
+.text-card {
+    background: #52667F;
+    height: 65vh;
+    width: 100%; 
+    background-image: url('../../docs/works.jpg');
+    background-repeat: no-repeat;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    color: #fff;
+    text-shadow: 1px 1px 6px rgba(150, 150, 150, 1);
+    margin: 0;
+    padding: 0;
+}
+
+.text-card .text {
+    overflow: none;
+    font-size: 2.9rem;
+    padding: 10px;
 }
 
 .topic .text {
@@ -374,6 +411,75 @@ header {
     font-size: 1rem;
     background: #242634;
     color: #ffffff;
+}
+
+.correct-viewport {
+    margin-top: 82px;
+}
+
+.card .image-work {
+    margin: 0;
+    padding: 0;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #E9623F;
+}
+
+.card .overlay:hover {
+    -o-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .4s;
+    opacity: 0.8;
+}
+
+.card {
+    -o-transition: .4s;
+    -ms-transition: .4s;
+    -moz-transition: .4s;
+    -webkit-transition: .4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    transition: .4s;
+    border-radius: 0px !important;
+    background: #ffffff;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: .4s;
+}
+
+.card .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    color: #ffffff;
+}
+
+.main-card {
+    background-color: #f1f1f1;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {

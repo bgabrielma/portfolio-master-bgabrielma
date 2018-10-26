@@ -17,6 +17,8 @@ $(function(){
     ScrollReveal().reveal('.scroll-frame-logo-1', { delay: 800, distance: '90px' });
     ScrollReveal().reveal('.scroll-frame-logo-2', { delay: 900, distance: '90px' });
     ScrollReveal().reveal('.scroll-frame-3', { delay: 700,  distance: '60px' });
+    ScrollReveal().reveal('.scroll-frame-work-card', { delay: 500,  distance: '90px' });
+    ScrollReveal().reveal('.scroll-frame-work-cards', { delay: 750,  distance: '70px' });
 
     if (!localStorage.getItem('visited') === 'yes') {
         swal({

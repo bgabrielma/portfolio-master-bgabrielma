@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Work extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,11 +23,17 @@ class Home extends CI_Controller {
         //Loading url helper
 		$this->load->helper('url');
 
-		$data['page_title'] = 'Portefólio - Homepage';
+		//connecting to database
+		$this->load->database();
+
+		$data = [
+			'page_title' => 'Portefólio - trabalhos realizados',
+			'data_bd' => $this->db->get('work')->result()
+		];
 
 		// render views
 		$this->load->view('pages/header', $data);
-		$this->load->view('pages/main_page');
+		$this->load->view('pages/works', $data);
 		$this->load->view('pages/footer');
 	}
 }

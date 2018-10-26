@@ -1,6 +1,6 @@
 <style>
     .construct {
-        height: 75%;
+        height: 100vh;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -16,6 +16,7 @@
         font-size: 3.2rem;
     }
 </style>
+
 
 <div class="construct">
     <div class="text text-center">
