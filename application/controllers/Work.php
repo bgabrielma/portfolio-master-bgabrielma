@@ -23,12 +23,8 @@ class Work extends CI_Controller {
         //Loading url helper
 		$this->load->helper('url');
 
-		//connecting to database
-		$this->load->database();
-
 		$data = [
-			'page_title' => 'Portefólio - trabalhos realizados',
-			'data_bd' => $this->db->get('work')->result()
+			'page_title' => 'Portefólio - trabalhos realizados'
 		];
 
 		// render views
